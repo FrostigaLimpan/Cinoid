@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -51,7 +52,7 @@
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\include;"..\..\..\Lib\Native\cinder_0.8.6_vc2013\include";"..\..\..\Lib\Native\cinder_0.8.6_vc2013\boost"</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;_WIN32_WINNT=0x0502;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader />
@@ -106,10 +107,23 @@
     <ResourceCompile Include="Resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\Ball.cpp" />
+    <ClCompile Include="..\src\BaseBlock.cpp" />
     <ClCompile Include="..\src\CinoidApp.cpp" />
+    <ClCompile Include="..\src\Level.cpp" />
+    <ClCompile Include="..\src\PlayerPaddle.cpp" />
+    <ClCompile Include="..\src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\Ball.h" />
+    <ClInclude Include="..\include\BaseBlock.h" />
+    <ClInclude Include="..\include\CollisionDetection.h" />
+    <ClInclude Include="..\include\GameState.h" />
+    <ClInclude Include="..\include\Level.h" />
+    <ClInclude Include="..\include\Parameters.h" />
+    <ClInclude Include="..\include\PlayerPaddle.h" />
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\include\Tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
